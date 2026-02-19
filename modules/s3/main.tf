@@ -1,6 +1,6 @@
 # Create an S3 bucket
 resource "aws_s3_bucket" "cbz_bucket" {
-  bucket = "cbz-frontend-project-bux" # Replace with a globally unique bucket name
+  bucket = "flight-reservation-s3-frontend-bucket" # Replace with a globally unique bucket name
 
   # Enable static website hosting
   website {
@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "cbz_bucket" {
   }
 
   tags = {
-    Name        = "StaticWebsiteBucket"
+    Name = "StaticWebsiteBucket"
     env = "dev"
   }
 }
